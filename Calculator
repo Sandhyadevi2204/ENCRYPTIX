@@ -1,0 +1,31 @@
+while True:
+    print("Calculator ")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    print("""
+    Press + for addition 
+    Press - for subtraction
+    Press * for multiplication
+    Press / for division
+    Press q or Q to exit""")
+    choice = input("Enter your operator: ")
+
+    if choice == '+':
+        result = num1 + num2
+        print(f"The addition of {num1} and {num2} is: {result}")
+    elif choice == '-':
+        result = num1 - num2
+        print(f"The subtraction of {num1} and {num2} is: {result}")
+    elif choice == '*':
+        result = num1 * num2
+        print(f"The multiplication of {num1} and {num2} is: {result}")
+    elif choice == '/':
+        if num2 != 0:
+            result = num1 / num2
+            print(f"The division of {num1} by {num2} is: {result}")
+        else:
+            print("Error: Division by zero")
+    elif choice == 'q' or choice == 'Q':
+        break
+    else:
+        print("Invalid input. Please enter one of '+', '-', '*', '/', 'q', or 'Q'")
